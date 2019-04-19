@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.action.extension" value="do"/>
+	<constant name="struts.multipart.saveDir" value="/upload" />
+	<package name = "error" extends = "struts-default">
+		<default-action-ref name="notFound" />
+   		<action name="notFound">
+    		<result>/error/error.jsp</result>
+  		 </action>
+	</package>
+
+	<package name = "loginAction" namespace = "/" extends = "struts-default">
+		
+		<action name = "userLogin" class = "com.datasnail.action.LoginAction" method = "userLogin">
+			<result  name = "success">/welcome.jsp</result>
+			<result name = "error">/WEB-INF/info.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name = "userStatisticAction" namespace = "/u" extends = "struts-default">
+		
+		<action name = "ftopo" class = "com.datasnail.action.UserStatisticAction" method = "getFollowTopoPage">
+			<result  name = "success">/WEB-INF/pages/followerTopo.jsp</result>
+			<result name = "error">/WEB-INF/info.jsp</result>
+		</action>
+		<action name = "itopo" class = "com.datasnail.action.UserStatisticAction" method = "getInteractionTopoPage">
+			<result  name = "success">/WEB-INF/pages/interactionTopo.jsp</result>
+			<result name = "error">/WEB-INF/info.jsp</result>
+		</action>
+		<action name = "statistic" class = "com.datasnail.action.UserStatisticAction" method = "getStatisticPage">
+			<result  name = "success">/WEB-INF/pages/statistic.jsp</result>
+			<result name = "error">/WEB-INF/info.jsp</result>
+		</action>
+		
+		<action name = "analyze" class = "com.datasnail.action.UserStatisticAction" method = "blogAnalyzePage">
+			<result name = "success">/WEB-INF/pages/blogAnalyze.jsp</result>
+		</action>
+		
+		
+	</package>
+	
+	<package name = "predictionAction" namespace = "/p" extends = "struts-default">
+		
+		<action name = "prediction" class = "com.datasnail.action.PredictionAction" method = "getStatisticPage">
+			<result  name = "success">/WEB-INF/pages/prediction.jsp</result>
+			<result name = "error">/WEB-INF/info.jsp</result>
+		</action>
+	</package>
+	
+	<package name = "infoAPI" namespace = "/api" extends = "json-default">
+		<action name = "folltopo" class = "com.datasnail.action.UserStatisticAction" method = "followTopoAPI">
+			<result  type = "json"><param name="root">jsonResult</param></result>
+		</action>
+		<action name = "itertopo" class = "com.datasnail.action.UserStatisticAction" method = "interactionTopoAPI">
+			<result  type = "json"><param name="root">jsonResult</param></result>
+		</action>
+		<action name = "gender" class = "com.datasnail.action.UserStatisticAction" method = "getGenderDistributionAPI">
+			<result  type = "json"><param name="root">jsonResult</param></result>
+		</action>
+		<action name = "keyword" class = "com.datasnail.action.UserStatisticAction" method = "getKeywordAPI">
+			<result  type = "json"><param name="root">jsonResult</param></result>
+		</action>
+		<action name = "usrloc" class = "com.datasnail.action.UserStatisticAction" method = "getUserLocationDataAPI">
+			<result  type = "json"><param name="root">jsonResult</param></result>
+		</action>
+		<action name = "crawl" class = "com.datasnail.action.UserStatisticAction" method = "crawlAPI">
+			<result  type = "json"><param name="root">jsonResult</param></result>
+		</action>
+		<action name = "extract" class = "com.datasnail.action.UserStatisticAction" method = "extractAPI">
+			<result  type = "json"><param name="root">jsonResult</param></result>
+		</action>
+		<action name = "inb" class = "com.datasnail.action.PredictionAction" method = "getPredictionResultAPI">
+			<result  type = "json"><param name="root">jsonResult</param></result>
+		</action>
+		<action name = "community" class = "com.datasnail.action.InfoAction" method = "getCommunityAPI">
+			<result  type = "json"><param name="root">jsonResult</param></result>
+		</action>
+	</package>
+</struts>

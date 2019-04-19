@@ -1,0 +1,24 @@
+{
+"max":12,
+"data": [
+	    {"name": "北京","value": 1 },
+	    {"name": "天津","value": 1 },
+	    {"name": "上海","value": 1 },
+	    {"name": "重庆","value": 1 },
+	    {"name": "河北","value": 1 },
+	    {"name": "安徽","value": 1 },
+	    {"name": "新疆","value": 1 },
+	    {"name": "浙江","value": 1 },
+	    {"name": "江西","value": 1 },
+	    {"name": "山西","value": 1 },
+	    {"name": "吉林","value": 1 },
+	    {"name": "福建","value": 1 },
+	    {"name": "广东","value": 1 },
+	    {"name": "西藏","value": 1 },
+	    {"name": "四川","value": 1 },
+	    {"name": "宁夏","value": 1 },
+	    {"name": "香港","value": 1 },
+	    {"name": "澳门","value": 1 },
+	    {"name": "内蒙古" ,"value": 1 }
+	    ]
+}

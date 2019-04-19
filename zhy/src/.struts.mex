@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="error" location="590,885" size="280,140">
+    <action name="notFound" location="67,59" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="error.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="loginAction" location="485,10" size="280,140">
+    <action name="userLogin" location="67,49" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="welcome.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="info.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="userStatisticAction" location="30,255" size="315,525">
+    <action name="ftopo" location="102,49" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="followerTopo.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="info.jsp" />
+      </result>
+    </action>
+    <action name="itopo" location="102,189" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="interactionTopo.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="info.jsp" />
+      </result>
+    </action>
+    <action name="statistic" location="102,294" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="statistic.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="info.jsp" />
+      </result>
+    </action>
+    <action name="analyze" location="102,409" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="blogAnalyze.jsp" />
+      </result>
+    </action>
+    <action name="pachong" location="12,462" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="blogAnalyze.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="predictionAction" location="765,255" size="280,140">
+    <action name="prediction" location="67,49" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="prediction.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="info.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="infoAPI" location="10,884" size="460,351">
+    <action name="folltopo" location="17,25" size="150,41">
+      <result name="success" />
+    </action>
+    <action name="itertopo" location="262,25" size="150,41">
+      <result name="success" />
+    </action>
+    <action name="gender" location="17,165" size="150,41">
+      <result name="success" />
+    </action>
+    <action name="usrloc" location="262,165" size="150,41">
+      <result name="success" />
+    </action>
+    <action name="inb" location="17,305" size="150,41">
+      <result name="success" />
+    </action>
+    <action name="community" location="262,305" size="150,41">
+      <result name="success" />
+    </action>
+  </package>
+  <webResource name="error.jsp" path="/error/error.jsp" location="655,1067" size="150,55" />
+  <webResource name="welcome.jsp" path="/welcome.jsp" location="270,52" size="150,55" />
+  <webResource name="info.jsp" path="/WEB-INF/info.jsp" location="550,297" size="150,55" />
+  <webResource name="followerTopo.jsp" path="/WEB-INF/pages/followerTopo.jsp" location="130,157" size="150,55" />
+  <webResource name="interactionTopo.jsp" path="/WEB-INF/pages/interactionTopo.jsp" location="410,437" size="150,55" />
+  <webResource name="statistic.jsp" path="/WEB-INF/pages/statistic.jsp" location="410,542" size="150,55" />
+  <webResource name="blogAnalyze.jsp" path="/WEB-INF/pages/blogAnalyze.jsp" location="410,647" size="150,55" />
+  <webResource name="prediction.jsp" path="/WEB-INF/pages/prediction.jsp" location="830,157" size="150,55" />
+</Struts2Diagram>
+

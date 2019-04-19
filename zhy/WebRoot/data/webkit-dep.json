@@ -1,0 +1,39 @@
+{
+	"legend":["家人", "朋友"],
+    "type": "force",
+    "categories": [
+        {
+            "name": "家人",
+            "base": "Users"
+        },{
+            "name": "朋友",
+            "base": "Users"
+        }
+    ],
+    "nodes": [
+        {
+            "name": "Ud1",
+            "value": 10,
+            "category": 0,
+            "draggable": true
+        },{
+            "name": "U2",
+            "value": 2,
+            "category": 0,
+            "draggable": true
+        },{
+            "name": "U3",
+            "value": 2,
+            "category": 0,
+            "draggable": true
+        }
+
+    ],
+    "links": [
+        {
+            "source": "Ud1",
+            "target": "U3"
+        }
+         
+    ]
+}
